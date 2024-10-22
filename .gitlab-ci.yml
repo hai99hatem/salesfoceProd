@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building the Salesforce project..."
+
+test:
+  stage: test
+  script:
+    - echo "Running Salesforce unit tests..."
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to Salesforce Org..."
