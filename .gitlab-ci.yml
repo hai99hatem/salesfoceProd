@@ -7,13 +7,16 @@ build:
   stage: build
   script:
     - echo "Building the Salesforce project..."
+    - sfdx force:source:push -u myScratchOrgAlias # Change to your org alias
 
 test:
   stage: test
   script:
     - echo "Running Salesforce unit tests..."
+    - sfdx force:apex:test:run -u myScratchOrgAlias --resultformat human --wait 10
 
 deploy:
   stage: deploy
   script:
     - echo "Deploying to Salesforce Org..."
+    - sfdx force:source:deploy -u productionOrgAlias -p force-app # Change to your production org alias
