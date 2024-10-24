@@ -11,7 +11,12 @@ variables:
 
 before_script:
   - npm install --global sfdx-cli        # Install Salesforce CLI
-  - sfdx force:auth:jwt:grant --clientid 6Cel800DAW00000C99lO888AW0000004jZd8cdsjE6PITXyjF6e9efpuY3wDn3X0QRBnfC4IV4tCfiadSm3JKBO7baTWnzY4VmicJ7zbpD2 --jwtkeyfile server.key --username hai@ovalo4BoondLab.com --instanceurl https://test.salesforce.com --setalias devMigration
+  - sfdx force:auth:jwt:grant \
+    --clientid 3MVG931doue2KUvxprXUl7FzLhoXUGfdSyvNWYbweME3DR2QP7Wzd53TUXH_DKm_qHmugmrsaoe1WRLFdwZaQ \
+    --jwtkeyfile server.key \
+    --username hai@ovalo4BoondLab.com \
+    --instanceurl https://test.salesforce.com \
+    --setalias devMigration \
   - sfdx force:auth:login -d -u $PROD_ORG_ALIAS  # Authenticate to the Prod Org
 
 build:
