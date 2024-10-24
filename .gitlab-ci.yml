@@ -3,6 +3,7 @@ image: node:16-buster  # Use a Docker image with Node.js
 stages:
   - build
   - test
+  - validate
   - deploy
 
 variables:
@@ -34,10 +35,17 @@ test:
     - sfdx force:apex:test:run -u $DEV_ORG_ALIAS --resultformat human --wait 10
     - sfdx force:source:retrieve -u $DEV_ORG_ALIAS -p force-app  # Retrieve latest changes from Dev Org
 
+validate:
+  stage: validate
+  script:
+    - echo "Validating the deployment to production..."
+    - sfdx force:source:deploy -u $PROD_ORG_ALIAS --checkonly --manifest manifest/package.xml  # Validate without committing changes
+  only:
+    - merge_requests
 deploy:
   stage: deploy
   script:
     - echo "Deploying to Production Org..."
-    - sfdx force:source:deploy -u $PROD_ORG_ALIAS -p force-app  # Deploy to Production Org
+    - sfdx force:source:deploy -u $  -p force-app  # Deploy to Production Org
   only:
     - main  # Run only on the main branch
