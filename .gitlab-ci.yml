@@ -11,7 +11,7 @@ variables:
 
 before_script:
   - npm install --global sfdx-cli        # Install Salesforce CLI
-  - sfdx force:auth:login -d -u $DEV_ORG_ALIAS  # Authenticate to the Dev Org
+  - sfdx force:auth:web:login -r https://test.salesforce.com -a $DEV_ORG_ALIAS  # Authenticate to the Dev Org
   - sfdx force:auth:login -d -u $PROD_ORG_ALIAS  # Authenticate to the Prod Org
 
 build:
