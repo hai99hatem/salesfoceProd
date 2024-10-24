@@ -1,3 +1,5 @@
+image: node:16-buster  # Use a Docker image with Node.js
+
 stages:
   - build
   - test
@@ -8,7 +10,7 @@ variables:
   PROD_ORG_ALIAS: "dataMigration"  # Production Org
 
 before_script:
-  - npm install -g sfdx-cli        # Install Salesforce CLI
+  - npm install --global sfdx-cli        # Install Salesforce CLI
   - sfdx force:auth:login -d -u $DEV_ORG_ALIAS  # Authenticate to the Dev Org
   - sfdx force:auth:login -d -u $PROD_ORG_ALIAS  # Authenticate to the Prod Org
 
