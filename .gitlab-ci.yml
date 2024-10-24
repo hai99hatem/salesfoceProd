@@ -15,13 +15,13 @@ before_script:
   - npm install --global sfdx-cli        # Install Salesforce CLI
   - sfdx force:auth:jwt:grant --clientid $SFDC_CONSUMER_KEY --jwtkeyfile ./server.key --username $SFDC_USERNAME --instanceurl https://test.salesforce.com --setdefaultusername -a $DEV_ORG_ALIAS
 
-  - sfdx force:auth:web:login -a $PROD_ORG_ALIAS -r https://login.salesforce.com  # Authenticate to the Prod Org
+  - sfdx force:auth:login -d -u $PROD_ORG_ALIAS  # Authenticate to the Prod Org
 
 build:
   stage: build
   script:
     - echo "Building the Salesforce project..."
-    - sfdx project deploy start -u $DEV_ORG_ALIAS  # Push changes to Dev Org
+    - sfdx force:source:deploy -u $DEV_ORG_ALIAS --manifest manifest/package.xml  # Push changes to Dev Org
 
 test:
   stage: test
