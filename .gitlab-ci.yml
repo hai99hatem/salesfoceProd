@@ -1,0 +1,34 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  DEV_ORG_ALIAS: "dataMigration"   # Developer Org
+  PROD_ORG_ALIAS: "dataMigration"  # Production Org
+
+before_script:
+  - npm install -g sfdx-cli        # Install Salesforce CLI
+  - sfdx force:auth:login -d -u $DEV_ORG_ALIAS  # Authenticate to the Dev Org
+  - sfdx force:auth:login -d -u $PROD_ORG_ALIAS  # Authenticate to the Prod Org
+
+build:
+  stage: build
+  script:
+    - echo "Building the Salesforce project..."
+    - sfdx force:source:push -u $DEV_ORG_ALIAS  # Push changes to Dev Org
+
+test:
+  stage: test
+  script:
+    - echo "Running Salesforce unit tests..."
+    - sfdx force:apex:test:run -u $DEV_ORG_ALIAS --resultformat human --wait 10
+    - sfdx force:source:retrieve -u $DEV_ORG_ALIAS -p force-app  # Retrieve latest changes from Dev Org
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to Production Org..."
+    - sfdx force:source:deploy -u $PROD_ORG_ALIAS -p force-app  # Deploy to Production Org
+  only:
+    - main  # Run only on the main branch
