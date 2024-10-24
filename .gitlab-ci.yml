@@ -10,12 +10,16 @@ variables:
   PROD_ORG_ALIAS: "dataMigration"  # Production Org
   SFDC_CONSUMER_KEY: "3MVG931doue2KUvxprXUl7FzLhoXUGfdSyvNWYbweME3DR2QP7Wzd53TUXH_DKm_qHmugmrsaoe1WRLFdwZaQ"
   SFDC_USERNAME: "hai@ovalo4BoondLab.com"
+  SFDC_CONSUMER_KEY_PROD: "3MVG9suI4ZYS8sz4Pt.Nmcin8aiPw5sQjV.isOHLfMdhpM2DzCWydsoKW3cwVnVpyYA46XtMJj2ULQEKZleE0"
+  SFDC_PROD_USERNAME: "hai@ovalo2024.fr"
 
 before_script:
   - npm install --global sfdx-cli        # Install Salesforce CLI
   - sfdx force:auth:jwt:grant --clientid $SFDC_CONSUMER_KEY --jwtkeyfile ./server.key --username $SFDC_USERNAME --instanceurl https://test.salesforce.com --setdefaultusername -a $DEV_ORG_ALIAS
 
   - sfdx force:source:deploy -u $DEV_ORG_ALIAS -p force-app  # Authenticate to the Prod Org
+  - sfdx force:auth:jwt:grant --clientid $SFDC_CONSUMER_KEY_PROD --jwtkeyfile ./server.key --username $SFDC_PROD_USERNAME --instanceurl https://login.salesforce.com --setdefaultusername -a $PROD_ORG_ALIAS
+
 
 build:
   stage: build
