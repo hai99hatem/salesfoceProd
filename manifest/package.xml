@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>*</members> <!-- Use specific names instead of '*' in production -->
-        <name>ApexClass</name>
-    </types>
-    <version>57.0</version>
+	<types>
+		<members>Account.CSOC_DATE__c</members>
+		<name>CustomField</name>
+	</types>
+	<version>60.0</version>
 </Package>
