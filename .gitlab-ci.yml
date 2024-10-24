@@ -8,15 +8,13 @@ stages:
 variables:
   DEV_ORG_ALIAS: "devMigration"   # Developer Org
   PROD_ORG_ALIAS: "dataMigration"  # Production Org
+  SFDC_CONSUMER_KEY: "3MVG931doue2KUvxprXUl7FzLhoXUGfdSyvNWYbweME3DR2QP7Wzd53TUXH_DKm_qHmugmrsaoe1WRLFdwZaQ"
+  SFDC_USERNAME: "hai@ovalo4BoondLab.com"
 
 before_script:
   - npm install --global sfdx-cli        # Install Salesforce CLI
-  - sfdx force:auth:jwt:grant \
-    --clientid 3MVG931doue2KUvxprXUl7FzLhoXUGfdSyvNWYbweME3DR2QP7Wzd53TUXH_DKm_qHmugmrsaoe1WRLFdwZaQ \
-    --jwtkeyfile server.key \
-    --username hai@ovalo4BoondLab.com \
-    --instanceurl https://test.salesforce.com \
-    --setalias devMigration \
+  - sfdx force:auth:jwt:grant --clientid $SFDC_CONSUMER_KEY --jwtkeyfile ./server.key --username $SFDC_USERNAME --instanceurl https://test.salesforce.com --setdefaultusername -a $DEV_ORG_ALIAS
+
   - sfdx force:auth:login -d -u $PROD_ORG_ALIAS  # Authenticate to the Prod Org
 
 build:
