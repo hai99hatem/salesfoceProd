@@ -46,6 +46,6 @@ deploy:
   stage: deploy
   script:
     - echo "Deploying to Production Org..."
-    - sfdx force:source:deploy -u $  -p force-app  # Deploy to Production Org
+    - sfdx force:source:deploy -u $PROD_ORG_ALIAS -p force-app  # Deploy to Production Org
   only:
     - main  # Run only on the main branch
