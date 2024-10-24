@@ -4,7 +4,7 @@ stages:
   - deploy
 
 variables:
-  DEV_ORG_ALIAS: "dataMigration"   # Developer Org
+  DEV_ORG_ALIAS: "devMigration"   # Developer Org
   PROD_ORG_ALIAS: "dataMigration"  # Production Org
 
 before_script:
