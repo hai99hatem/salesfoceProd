@@ -21,7 +21,7 @@ build:
   stage: build
   script:
     - echo "Building the Salesforce project..."
-    - sfdx force:source:deploy -u $DEV_ORG_ALIAS --manifest package.xml  # Push changes to Dev Org
+    - sfdx force:source:deploy -u $DEV_ORG_ALIAS --manifest manifest/package.xml  # Push changes to Dev Org
 
 test:
   stage: test
