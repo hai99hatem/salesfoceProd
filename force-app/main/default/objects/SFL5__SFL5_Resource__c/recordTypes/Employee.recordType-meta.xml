@@ -39,29 +39,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Experience__c</picklist>
-        <values>
-            <fullName>-1</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>1 to 2 years</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>3 to 5 years</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>6 to 10 years</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>No experience</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Profil__c</picklist>
         <values>
             <fullName>Accounting</fullName>
