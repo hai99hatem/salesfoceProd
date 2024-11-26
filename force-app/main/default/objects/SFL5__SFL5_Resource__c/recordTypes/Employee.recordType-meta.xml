@@ -2,7 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Employee</fullName>
     <active>true</active>
-    <compactLayoutAssignment>Compact_Layout_MVP</compactLayoutAssignment>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <label>Employee</label>
     <picklistValues>
         <picklist>Civility__c</picklist>
