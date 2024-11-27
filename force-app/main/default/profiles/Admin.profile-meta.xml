@@ -6,13 +6,12 @@
         <startAddress>0.0.0.0</startAddress>
     </loginIpRanges>
     <recordTypeVisibilities>
-        <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
+        <default>false</default>
         <recordType>SFL5__SFL5_Resource__c.Candidate</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
         <recordType>SFL5__SFL5_Resource__c.Employee</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
