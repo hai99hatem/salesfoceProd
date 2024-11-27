@@ -1,0 +1,14 @@
+.THIS .image-container {
+    display: flex;               /* Use flexbox for centering */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+    height: 100%;                /* Ensure the container has height */
+    margin: 10px;                /* Margin around the container */
+}
+
+.THIS .responsive-image {
+    width: 400px;               /* Set width to 100 pixels */
+    height: auto;               /* Maintain aspect ratio */
+    display: block;             /* Ensure the image is treated as a block */
+    margin: 0 auto;            /* Center block-level elements */
+}
