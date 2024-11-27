@@ -36,11 +36,7 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Opportunity</pageOrSobjectType>
     </actionOverrides>
-    <brand>
-        <headerColor>#0070D2</headerColor>
-        <logoVersion>1</logoVersion>
-        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
-    </brand>
+
     <description>Sell smarter and faster with the world&apos;s #1 CRM solution.</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
@@ -62,8 +58,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Quote</tabs>
-    <tabs>Skill__c</tabs>
-    <tabs>Skill_Assignment__c</tabs>
+  
     <uiType>Lightning</uiType>
     <utilityBar>LightningSales_UtilityBar</utilityBar>
 </CustomApplication>
