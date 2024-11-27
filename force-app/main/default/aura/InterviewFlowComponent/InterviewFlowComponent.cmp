@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:appHostable">
+    <!-- Attribute to store ResourceId -->
+    <aura:attribute name="resourceId" type="String" />
+
+    <!-- Lightning Flow Component -->
+    <lightning:flow aura:id="interviewFlow" />
+
+    <!-- Handler for initialization -->
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}" />
+</aura:component>

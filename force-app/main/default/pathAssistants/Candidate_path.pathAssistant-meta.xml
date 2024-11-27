@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>SFL5__SFL5_Resource__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Candidate path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Email_1__c</fieldNames>
+        <fieldNames>Mobile_1__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <fieldNames>Comments__c</fieldNames>
+        <fieldNames>Disponibility__c</fieldNames>
+        <picklistValueName>EC1</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Mobile_1__c</fieldNames>
+        <fieldNames>Email_1__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <fieldNames>Comments__c</fieldNames>
+        <fieldNames>Disponibility__c</fieldNames>
+        <picklistValueName>EC2</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Mobile_1__c</fieldNames>
+        <fieldNames>Email_1__c</fieldNames>
+        <fieldNames>Comments__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <picklistValueName>EC3</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Perfect_mission__c</fieldNames>
+        <fieldNames>Mobility__c</fieldNames>
+        <fieldNames>Min_Salary_expectations_kEu__c</fieldNames>
+        <fieldNames>Disponibility__c</fieldNames>
+        <fieldNames>Comments__c</fieldNames>
+        <picklistValueName>Initial contact</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Mobile_1__c</fieldNames>
+        <fieldNames>Email_1__c</fieldNames>
+        <fieldNames>Source__c</fieldNames>
+        <fieldNames>Disponibility__c</fieldNames>
+        <fieldNames>Comments__c</fieldNames>
+        <picklistValueName>Qualification</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Mobile_1__c</fieldNames>
+        <fieldNames>Email_1__c</fieldNames>
+        <fieldNames>Disponibility__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <picklistValueName>TT</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Candidate</recordTypeName>
+</PathAssistant>
