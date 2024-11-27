@@ -36,8 +36,9 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Opportunity</pageOrSobjectType>
     </actionOverrides>
-    <brand>
+ <brand>
         <headerColor>#0070D2</headerColor>
+        <logo>Sales</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -62,8 +63,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Quote</tabs>
-    <tabs>Skill__c</tabs>
-    <tabs>Skill_Assignment__c</tabs>
+  
     <uiType>Lightning</uiType>
     <utilityBar>LightningSales_UtilityBar</utilityBar>
 </CustomApplication>
