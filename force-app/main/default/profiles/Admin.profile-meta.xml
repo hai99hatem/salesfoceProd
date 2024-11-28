@@ -4978,7 +4978,7 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
-        <default>false</default>
+        <default>true</default>
         <recordType>Interview__c.EC1</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
