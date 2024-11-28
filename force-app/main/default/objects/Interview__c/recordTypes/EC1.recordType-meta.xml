@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EC1</fullName>
+    <active>true</active>
+    <label>EC1</label>
+    <picklistValues>
+        <picklist>Disponibility__c</picklist>
+        <values>
+            <fullName>3 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immediately</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than a month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 3 months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Result__c</picklist>
+        <values>
+            <fullName>NOK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
