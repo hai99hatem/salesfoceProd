@@ -4977,6 +4977,27 @@
         <recordType>SFL5__SFL5_Resource__c.Employee</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Interview__c.EC1</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Interview__c.EC2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Interview__c.EC3</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Interview__c.TT</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+
     <tabVisibilities>
         <tab>SFL5__SFL5_Assign__c</tab>
         <visibility>DefaultOn</visibility>
