@@ -24,8 +24,8 @@
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
     <serverIsDown>SNA_ZMwcn_sf_default_cdn_ET_Form_Aura1</serverIsDown>
-    <siteAdmin>hai@ovalo4boondlab.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>hai@ovalo4boondlab.com</siteGuestRecordDefaultOwner>
+    <siteAdmin>admin-it@ovalo.fr</siteAdmin>
+    <siteGuestRecordDefaultOwner>admin-it@ovalo.fr</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <urlPathPrefix>ETFormAura</urlPathPrefix>
 </CustomSite>
