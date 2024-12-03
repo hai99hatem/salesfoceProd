@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <assignments>
+        <name>assignName</name>
+        <label>assignName</label>
+        <locationX>456</locationX>
+        <locationY>353</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>nameFor</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UPDATE</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>nameFor</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.RecordType.Name} &amp; &apos; -  &apos; &amp;{!$Record.Resource__r.First_Name__c} &amp; &apos; &apos; &amp;{!$Record.Resource__r.Name} &amp; &apos; - &apos; &amp;  
+TEXT(DAY(DATEVALUE({!$Record.CreatedDate}))) &amp; &apos;/&apos; &amp; TEXT(MONTH(DATEVALUE({!$Record.CreatedDate}))) &amp; &apos;/&apos; &amp; TEXT(YEAR(DATEVALUE({!$Record.CreatedDate})))</expression>
+    </formulas>
+    <interviewLabel>FLW_Interview_Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FLW_Interview_Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UPDATE</name>
+        <label>UPDATE</label>
+        <locationX>681</locationX>
+        <locationY>352</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>330</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>assignName</targetReference>
+        </connector>
+        <object>Interview__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
