@@ -103,7 +103,7 @@
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <start>
         <locationX>330</locationX>
@@ -118,7 +118,7 @@
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>Bonjour,
 Vous trouverez ci-dessous le lien du TT:
-https://ovalocx--4boondlab.sandbox.my.site.com/ETFormAura/s/?ResourceId={!ResourceId}
+{!$Label.TTSite}?ResourceId={!ResourceId}
 Ovalo
 Cordialement.</text>
     </textTemplates>
