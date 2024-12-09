@@ -4,6 +4,10 @@
         <layout>SFL5__SFL5_Resource__c-Candidate Page Layout</layout>
         <recordType>SFL5__SFL5_Resource__c.Candidate</recordType>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>SFL5__SFL5_Resource__c-Employee Page Layout</layout>
+        <recordType>SFL5__SFL5_Resource__c.Employee</recordType>
+    </layoutAssignments>
  
     <fieldPermissions>
         <editable>false</editable>
