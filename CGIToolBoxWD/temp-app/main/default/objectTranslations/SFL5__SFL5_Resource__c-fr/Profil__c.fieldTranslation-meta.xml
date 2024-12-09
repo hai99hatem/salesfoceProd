@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Profil__c</name>
+    <picklistValues>
+        <masterLabel>Accounting</masterLabel>
+        <translation>Comptabilité</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business engineer</masterLabel>
+        <translation>Ingénieur d&apos;affaires</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CEO</masterLabel>
+        <translation>Directeur Général</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consultant</masterLabel>
+        <translation>Consultant</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director</masterLabel>
+        <translation>Directeur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation>Partenaire</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RH Manager</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recruitment manager</masterLabel>
+        <translation>Chargée de recrutement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Undefined</masterLabel>
+        <translation>Non défini</translation>
+    </picklistValues>
+</CustomFieldTranslation>

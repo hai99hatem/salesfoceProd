@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ressource</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ressources</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom</nameFieldLabel>
+    <recordTypes>
+        <label>Candidat(e)</label>
+        <name>Candidate</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Employé(e)</label>
+        <name>Employee</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Externe</label>
+        <name>External</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label>Nouvel entretien</label>
+        <name>New_Interview</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Send_Email_TT</name>
+    </webLinks>
+    <webLinks>
+        <label>Lien du TT</label>
+        <name>TT_Interview</name>
+    </webLinks>
+</CustomObjectTranslation>
