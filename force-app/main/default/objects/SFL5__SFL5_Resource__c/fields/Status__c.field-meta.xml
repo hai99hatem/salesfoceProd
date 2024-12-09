@@ -142,7 +142,12 @@
         <valueSettings>
             <controllingFieldValue>EC1</controllingFieldValue>
             <controllingFieldValue>EC2</controllingFieldValue>
+<controllingFieldValue>Recruited</controllingFieldValue>
             <valueName>En cours</valueName>
+        </valueSettings>
+<valueSettings>
+            <controllingFieldValue>Recruited</controllingFieldValue>
+            <valueName>Sortie</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>
