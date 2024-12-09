@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Civilité</label>
+    <name>Civility__c</name>
+    <picklistValues>
+        <masterLabel>Ind.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mme.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>
