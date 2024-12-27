@@ -21,18 +21,12 @@ jobs:
 
       - name: Authenticate Dev Org
         run: |
-          echo "-----BEGIN PRIVATE KEY-----
-          MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDY...
-          -----END PRIVATE KEY-----" > server.key
-          sfdx force:auth:jwt:grant --clientid 3MVG931doue2KUvxprXUl7FzLhoXUGfdSyvNWYbweME3DR2QP7Wzd53TUXH_DKm_qHmugmrsaoe1WRLFdwZaQ \
-           --jwtkeyfile ./server.key --username hai@ovalo4BoondLab.com \
-           --instanceurl https://test.salesforce.com --setdefaultusername -a devMigration
+          echo "${{ secrets.SFDC_SERVER_KEY }}" > server.key
+          sfdx force:auth:jwt:grant --clientid ${{ secrets.SFDC_CONSUMER_KEY }} --jwtkeyfile ./server.key --username ${{ secrets.SFDC_USERNAME }} --instanceurl https://test.salesforce.com --setdefaultusername -a devMigration
 
       - name: Authenticate Prod Org
         run: |
-          sfdx force:auth:jwt:grant --clientid 3MVG9suI4ZYS8sz4Pt.Nmcin8aiPw5sQjV.isOHLfMdhpM2DzCWydsoKW3cwVnVpyYA46XtMJj2ULQEKZleE0 \
-           --jwtkeyfile ./server.key --username hai@ovalo2024.fr \
-           --instanceurl https://login.salesforce.com --setdefaultusername -a dataMigration
+          sfdx force:auth:jwt:grant --clientid ${{ secrets.SFDC_CONSUMER_KEY_PROD }} --jwtkeyfile ./server.key --username ${{ secrets.SFDC_PROD_USERNAME }} --instanceurl https://login.salesforce.com --setdefaultusername -a dataMigration
 
   build:
     name: Build and Deploy to Dev
@@ -69,4 +63,3 @@ jobs:
     steps:
       - name: Deploy to Production
         run: sfdx force:source:deploy -u dataMigration --manifest manifest/package.xml
-
