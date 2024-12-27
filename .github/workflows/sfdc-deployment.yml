@@ -19,30 +19,24 @@ jobs:
       - name: Install Salesforce CLI
         run: npm install --global sfdx-cli
 
-      - name: Set up Environment Variables
-        run: |
-          echo "SFDC_CONSUMER_KEY=3MVG931doue2KUvxprXUl7FzLhoXUGfdSyvNWYbweME3DR2QP7Wzd53TUXH_DKm_qHmugmrsaoe1WRLFdwZaQ" >> $GITHUB_ENV
-          echo "SFDC_USERNAME=hai@ovalo4BoondLab.com" >> $GITHUB_ENV
-          echo "SFDC_PROD_CONSUMER_KEY=3MVG9suI4ZYS8sz4Pt.Nmcin8aiPw5sQjV.isOHLfMdhpM2DzCWydsoKW3cwVnVpyYA46XtMJj2ULQEKZleE0" >> $GITHUB_ENV
-          echo "SFDC_PROD_USERNAME=hai@ovalo2024.fr" >> $GITHUB_ENV
-          echo "SERVER_KEY=$(echo 'YOUR_PRIVATE_KEY') >> $GITHUB_ENV
-
       - name: Authenticate Dev Org
         run: |
-          echo "$SERVER_KEY" > server.key
-          sfdx force:auth:jwt:grant \
-            --clientid $SFDC_CONSUMER_KEY \
-            --jwtkeyfile server.key \
-            --username $SFDC_USERNAME \
-            --instanceurl https://test.salesforce.com \
-            --setdefaultusername -a devMigration
+          echo "${{ secrets.SFDC_SERVER_KEY }}" > server.key
+          sfdx force:auth:jwt:grant --clientid ${{ secrets.SFDC_CONSUMER_KEY }} --jwtkeyfile ./server.key --username ${{ secrets.SFDC_USERNAME }} --instanceurl https://test.salesforce.com --setdefaultusername -a devMigration
 
       - name: Authenticate Prod Org
         run: |
-          echo "$SERVER_KEY" > server.key
-          sfdx force:auth:jwt:grant \
-            --clientid $SFDC_PROD_CONSUMER_KEY \
-            --jwtkeyfile server.key \
-            --username $SFDC_PROD_USERNAME \
-            --instanceurl https://login.salesforce.com \
-            --setdefaultusername -a dataMigration
+          echo "${{ secrets.SFDC_SERVER_KEY }}" > server.key
+          sfdx force:auth:jwt:grant --clientid ${{ secrets.SFDC_CONSUMER_KEY_PROD }} --jwtkeyfile ./server.key --username ${{ secrets.SFDC_PROD_USERNAME }} --instanceurl https://login.salesforce.com --setdefaultusername -a dataMigration
+
+  build:
+    name: Build and Deploy to Dev
+    needs: auth
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Dev Org
+        run: sfdx force:source:deploy -u devMigration --manifest manifest/package.xml
+
+  test:
+    name: Run Apex Tests
+    needs
